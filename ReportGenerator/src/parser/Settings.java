@@ -104,7 +104,7 @@ public class Settings {
     @XmlRootElement
     @XmlAccessorType(XmlAccessType.FIELD)
     public static class Columns {
-        @XmlElement(name = "columns")
+        @XmlElement(name = "column")
         private List<Column> columns;
 
         public Columns(List<Column> columns) {
