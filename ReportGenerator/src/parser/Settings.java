@@ -37,7 +37,7 @@ public class Settings {
 
     @XmlRootElement
     @XmlAccessorType(XmlAccessType.FIELD)
-    public class Page {
+    public static class Page {
         private int width;
         private int height;
 
@@ -70,7 +70,7 @@ public class Settings {
 
     @XmlRootElement
     @XmlAccessorType(XmlAccessType.FIELD)
-    public class Column {
+    public static class Column {
         private String title;
         private int width;
         private List<Column> columns;
