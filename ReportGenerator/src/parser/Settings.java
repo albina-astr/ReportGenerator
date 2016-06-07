@@ -1,19 +1,18 @@
 package parser;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Settings {
     private Page pages;
-    private Column columns;
+    private List<Column> columns;
 
     public Settings() {
     }
 
-    public Settings(Page pages, Column columns) {
+    public Settings(Page pages, List<Column> columns) {
         this.pages = pages;
         this.columns = columns;
     }
@@ -27,32 +26,34 @@ public class Settings {
         this.pages = pages;
     }
 
-    public Column getColumns() {
+    public List<Column> getColumns() {
         return columns;
     }
 
     @XmlElement(name = "columns")
-    public void setColumns(Column columns) {
+    public void setColumns(List<Column> columns) {
         this.columns = columns;
     }
 
-    private class Page {
+    @XmlRootElement
+    @XmlAccessorType(XmlAccessType.FIELD)
+    public class Page {
         private int width;
         private int height;
 
-        private Page(int height, int width) {
+        public Page(int height, int width) {
             this.height = height;
             this.width = width;
         }
 
-        private Page() {
+        public Page() {
         }
 
         public int getWidth() {
             return width;
         }
 
-        @XmlAttribute(name = "width")
+        @XmlElement(name = "width")
         public void setWidth(int width) {
             this.width = width;
         }
@@ -61,23 +62,25 @@ public class Settings {
             return height;
         }
 
-        @XmlAttribute(name = "height")
+        @XmlElement(name = "height")
         public void setHeight(int height) {
             this.height = height;
         }
     }
 
-    private class Column {
+    @XmlRootElement
+    @XmlAccessorType(XmlAccessType.FIELD)
+    public class Column {
         private String title;
         private int width;
         private List<Column> columns;
 
-        private Column(String dataColumnLength, int fioColumnLength) {
+        public Column(String dataColumnLength, int fioColumnLength) {
             this.title = dataColumnLength;
             this.width = fioColumnLength;
         }
 
-        private Column() {
+        public Column() {
         }
 
         public String getTitle() {
