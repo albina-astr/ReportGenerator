@@ -73,7 +73,6 @@ public class Settings {
     public static class Column {
         private String title;
         private int width;
-        private List<Column> columns;
 
         public Column(String dataColumnLength, int fioColumnLength) {
             this.title = dataColumnLength;
@@ -97,15 +96,6 @@ public class Settings {
 
         public void setWidth(int width) {
             this.width = width;
-        }
-
-        @XmlElement(name="columns")
-        public List<Column> getColumns() {
-            return columns;
-        }
-
-        public void setColumns(List<Column> columns) {
-            this.columns = columns;
         }
     }
 }
