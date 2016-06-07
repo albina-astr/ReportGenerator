@@ -5,7 +5,7 @@
 		<width>32</width>
 		<height>12</height>
 	</page>
-	<columns>
+	<columnsL>
 		<column>
 			<title>Номер</title>
 			<width>8</width>
@@ -18,5 +18,5 @@
 			<title>ФИО</title>
 			<width>7</width>
 		</column>
-	</columns>
+	</columnsL>
 </settings>
