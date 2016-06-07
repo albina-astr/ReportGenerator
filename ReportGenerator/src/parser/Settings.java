@@ -6,7 +6,9 @@ import java.util.List;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Settings {
+    @XmlElement(name = "page")
     private Page pages;
+    @XmlElement(name = "columns")
     private List<Column> columns;
 
     public Settings() {
@@ -21,7 +23,6 @@ public class Settings {
         return pages;
     }
 
-    @XmlElement(name = "page")
     public void setPages(Page pages) {
         this.pages = pages;
     }
@@ -30,7 +31,6 @@ public class Settings {
         return columns;
     }
 
-    @XmlElement(name = "columns")
     public void setColumns(List<Column> columns) {
         this.columns = columns;
     }
@@ -38,7 +38,9 @@ public class Settings {
     @XmlRootElement
     @XmlAccessorType(XmlAccessType.FIELD)
     public static class Page {
+        @XmlElement(name = "width")
         private int width;
+        @XmlElement(name = "height")
         private int height;
 
         public Page(int height, int width) {
@@ -53,7 +55,6 @@ public class Settings {
             return width;
         }
 
-        @XmlElement(name = "width")
         public void setWidth(int width) {
             this.width = width;
         }
@@ -62,7 +63,6 @@ public class Settings {
             return height;
         }
 
-        @XmlElement(name = "height")
         public void setHeight(int height) {
             this.height = height;
         }
@@ -71,7 +71,9 @@ public class Settings {
     @XmlRootElement
     @XmlAccessorType(XmlAccessType.FIELD)
     public static class Column {
+        @XmlElement(name = "title")
         private String title;
+        @XmlElement(name = "width")
         private int width;
 
         public Column(String dataColumnLength, int fioColumnLength) {
