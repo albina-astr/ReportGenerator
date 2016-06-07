@@ -9,12 +9,12 @@ public class Settings {
     @XmlElement(name = "page")
     private Page pages;
     @XmlElement(name = "columns")
-    private List<Column> columns;
+    private Columns columns;
 
     public Settings() {
     }
 
-    public Settings(Page pages, List<Column> columns) {
+    public Settings(Page pages, Columns columns) {
         this.pages = pages;
         this.columns = columns;
     }
@@ -27,11 +27,11 @@ public class Settings {
         this.pages = pages;
     }
 
-    public List<Column> getColumns() {
+    public Columns getColumns() {
         return columns;
     }
 
-    public void setColumns(List<Column> columns) {
+    public void setColumns(Columns columns) {
         this.columns = columns;
     }
 
@@ -98,6 +98,28 @@ public class Settings {
 
         public void setWidth(int width) {
             this.width = width;
+        }
+    }
+
+    @XmlRootElement
+    @XmlAccessorType(XmlAccessType.FIELD)
+    public static class Columns {
+        @XmlElement(name = "columns")
+        private List<Column> columns;
+
+        public Columns(List<Column> columns) {
+            this.columns = columns;
+        }
+
+        public Columns() {
+        }
+
+        public List<Column> getColumns() {
+            return columns;
+        }
+
+        public void setColumns(List<Column> columns) {
+            this.columns = columns;
         }
     }
 }
