@@ -438,7 +438,7 @@
       <xsd:enumeration value="51">
         <xsd:annotation>
           <xsd:documentation>
-            <CodeName>Required data missing</CodeName>
+            <CodeName>Required dataList missing</CodeName>
           </xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>
@@ -704,7 +704,7 @@
       <xsd:enumeration value="89">
         <xsd:annotation>
           <xsd:documentation>
-            <CodeName>Card acceptor data error</CodeName>
+            <CodeName>Card acceptor dataList error</CodeName>
           </xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>

@@ -53,7 +53,7 @@
         </ref>
       </element>
       <element name="number">
-        <data type="int"/>
+        <dataList type="int"/>
       </element>
     </choice>
   </define>

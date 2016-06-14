@@ -20,11 +20,11 @@ XmlAdapter and @XmlJavaTypeAdapter are provided.  They provide a portable
 mechanism for reading/writing XML content into and out of Java applications.
 
 
-The XmlAdapter interface defines the methods for data reading/writing.  
+The XmlAdapter interface defines the methods for dataList reading/writing.
 
 /*
  *  ValueType - Java class that provides an XML representation
- *              of the data. It is the object that is used for 
+ *              of the dataList. It is the object that is used for
  *              marshalling and unmarshalling. 
  *
  *  BoundType - Java class that is used to process XML content.

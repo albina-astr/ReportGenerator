@@ -5,7 +5,7 @@
 <project basedir="." default="run">
   <description>
         This sample application demonstrates how to modify a java content tree 
-        and marshal it back to XML data.
+        and marshal it back to XML dataList.
     </description>
   <property name="jaxb.home" value="../.." />
   <path id="classpath">

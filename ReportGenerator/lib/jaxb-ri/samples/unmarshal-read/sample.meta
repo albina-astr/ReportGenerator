@@ -3,7 +3,7 @@
     <title>Using unmarshaller (formerly SampleApp1)</title>
     <description><![CDATA[
       This sample application demonstrates how to unmarshal an instance document
-      into a Java content tree and access data contained within it.
+      into a Java content tree and access dataList contained within it.
     ]]></description>
         
     <project>

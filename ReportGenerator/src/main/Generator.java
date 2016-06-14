@@ -4,12 +4,14 @@ import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.bean.ColumnPositionMappingStrategy;
 import au.com.bytecode.opencsv.bean.CsvToBean;
 import parser.Data;
+import parser.ReportMaker;
 import parser.Settings;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Generator {
@@ -19,11 +21,13 @@ public class Generator {
         File dataFile = new File(args[1]);
         File resultFile = new File(args[2]);
 
+        List<Data> data = new ArrayList<>();
+        Settings settings = null;
+
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Settings.class);
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            Settings settings = (Settings) jaxbUnmarshaller.unmarshal(xmlSettingsFile);
-            System.out.println(settings);
+            settings = (Settings) jaxbUnmarshaller.unmarshal(xmlSettingsFile);
 
         } catch (JAXBException e) {
             e.printStackTrace();
@@ -31,20 +35,23 @@ public class Generator {
 
         CsvToBean csv = new CsvToBean();
 
-        List list;
+        List dataObjects;
         try {
             CSVReader csvReader = new CSVReader(new InputStreamReader(new FileInputStream(dataFile.getName()), "UTF-16"), '\t');
 
             //Set column mapping strategy
-            list = csv.parse(setColumnMapping(), csvReader);
+            dataObjects = csv.parse(setColumnMapping(), csvReader);
 
-            for (Object object : list) {
-                Data employee = (Data) object;
-                System.out.println(employee);
+            for (Object object : dataObjects) {
+                Data curData = (Data) object;
+                data.add(curData);
             }
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         }
+
+        ReportMaker reportMaker = new ReportMaker(data, settings);
+        reportMaker.writeToFile(resultFile);
 
     }
 

@@ -2,13 +2,13 @@ This example demonstrates how one can use one communication channel
 (such as a socket) to send multiple XML messages, and how it can be
 combined with JAXB.
 
-XML1.0 requires a conforming parser to read the entire data till end
+XML1.0 requires a conforming parser to read the entire dataList till end
 of the stream (because a parser needs to handle documents like
 <root/><!-- post root comment -->). As a result, a naive attempt to
 keep one OutputStream open and marshal objects multiple times fails.
 
 This example shows you how to work around this limitation. In this
-example, the data on the wire will look like the following:
+example, the dataList on the wire will look like the following:
 
 <conversation>
   <!-- message 1 -->

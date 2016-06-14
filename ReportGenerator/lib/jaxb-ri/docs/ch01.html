@@ -43,16 +43,16 @@
             classes with the annotations defined in the
             <code class="literal">javax.xml.bind.annotation</code> package so that the JAXB
             runtime binding framework is capable of performing the (un)marshal
-            operations. Here are the basic steps for developing an app:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Develop your data model in Java</p></li><li class="listitem"><p>Apply the <code class="literal">javax.xml.bind.annotation</code>
+            operations. Here are the basic steps for developing an app:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Develop your dataList model in Java</p></li><li class="listitem"><p>Apply the <code class="literal">javax.xml.bind.annotation</code>
                     annotations to control the binding process</p></li><li class="listitem"><p>Set your <code class="literal">CLASSPATH</code> to include all
-                    of the <a class="xref" href="ch02.html#jars" title="2.&nbsp;Identifying the JAR Files">Identifying the JAR Files</a></p></li><li class="listitem"><p>Compile your data model with
+                    of the <a class="xref" href="ch02.html#jars" title="2.&nbsp;Identifying the JAR Files">Identifying the JAR Files</a></p></li><li class="listitem"><p>Compile your dataList model with
                     <code class="literal">javac</code></p><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>Make sure that you <code class="literal">CLASSPATH</code>
                         includes <code class="filename">jaxb-xjc.jar</code> before
                         running <span class="command"><strong>javac</strong></span>.</p></div></li><li class="listitem"><p>The resulting class files will contain your
                     annotations as well other default annotations needed by
-                    the JAXB runtime binding framework</p></li><li class="listitem"><p>Develop your client application that uses the data
+                    the JAXB runtime binding framework</p></li><li class="listitem"><p>Develop your client application that uses the dataList
                     model and develop the code that uses the JAXB runtime
-                    binding framework to persist your data model using the
+                    binding framework to persist your dataList model using the
                     (un)marshal operations.</p></li><li class="listitem"><p>Compile and run your client application!</p></li></ol></div><p>For more information about this process, see the the <a class="link" href="http://docs.oracle.com/javaee/6/tutorial/doc/gijti.html" target="_top">Java
             WSDP Tutorial</a> and the extensive <a class="xref" href="ch01.html#jaxb-2-0-sample-apps" title="3.&nbsp;Sample Apps">Sample Apps</a>
             documentation.</p></div><div class="section" title="3.1.3.&nbsp;Building and Running the Sample Apps with Ant"><div class="titlepage"><div><div><h4 class="title" id="section-3999932384958513">3.1.3.&nbsp;Building and Running the Sample Apps with Ant</h4></div></div></div><p>To run the sample applications, just go into each sample
@@ -71,7 +71,7 @@
                         lazily.</p></dd><dt><span class="term"><code class="literal">samples/create-marshal</code></span></dt><dd><p>This sample application demonstrates how to use
                         the <code class="literal">ObjectFactory</code> class to create a
                         Java content tree from scratch and marshal it to XML
-                        data. It also demonstrates how to add content to a
+                        dataList. It also demonstrates how to add content to a
                         JAXB List property.</p></dd><dt><span class="term"><code class="literal">samples/cycle-recovery</code></span></dt><dd><p>JAXB RI's vendor extension
                         <code class="literal">CycleRecoverable</code> provides
                         application a hook to handle cycles in the object
@@ -134,7 +134,7 @@
                         object and cast it down to
                         <code class="literal">com.sun.xml.bind.extra.Locatable</code>.</p></dd><dt><span class="term"><code class="literal">samples/modify-marshal</code></span></dt><dd><p>This sample application demonstrates how to
                         modify a java content tree and marshal it back to XML
-                        data.</p></dd><dt><span class="term"><code class="literal">samples/namespace-prefix</code></span></dt><dd><p>This sample application demonstrates how to use
+                        dataList.</p></dd><dt><span class="term"><code class="literal">samples/namespace-prefix</code></span></dt><dd><p>This sample application demonstrates how to use
                         the new JAXB RI Marshaller property
                         <code class="literal">com.sun.xml.bind.namespacePrefixMapper</code>
                         to customize the namespace prefixes generated during
@@ -155,7 +155,7 @@
                         Language) order instance and prints a report to the
                         screen.</p></dd><dt><span class="term"><code class="literal">samples/unmarshal-read</code></span></dt><dd><p>This sample application demonstrates how to
                         unmarshal an instance document into a Java content
-                        tree and access data contained within it.</p></dd><dt><span class="term"><code class="literal">samples/unmarshal-validate</code></span></dt><dd><p>This sample application demonstrates how to
+                        tree and access dataList contained within it.</p></dd><dt><span class="term"><code class="literal">samples/unmarshal-validate</code></span></dt><dd><p>This sample application demonstrates how to
                         enable validation during the unmarshal
                         operations.</p></dd><dt><span class="term"><code class="literal">samples/updateablePartialBind</code></span></dt><dd><p>This sample application demonstrates how to
                         partially map a DOM tree to JAXB (using JAXP 1.3

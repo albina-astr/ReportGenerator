@@ -5,7 +5,7 @@
 <project basedir="." default="run">
   <description>
       This sample application demonstrates how to unmarshal an instance document
-      into a Java content tree and access data contained within it.
+      into a Java content tree and access dataList contained within it.
     </description>
   <property name="jaxb.home" value="../.." />
   <path id="classpath">

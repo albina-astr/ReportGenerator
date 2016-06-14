@@ -156,7 +156,7 @@ address
 		the UBL Naming and Design rules [NDR] into XML Schema syntax [XSD1][XSD2]. The
 		analysis and design processes developed by the UBL Library Content team are
 		described in Annex A. </P> 
-	 <P>The UBL library is intended for use in business data contexts beyond the
+	 <P>The UBL library is intended for use in business dataList contexts beyond the
 		specific set of document types provided in this specification. For the purposes
 		of this release, Section 5 below describes the scenario and choreography used
 		in developing this set of documents. For example, the document Order Response
@@ -190,7 +190,7 @@ address
 		  through the mail archives linked from the UBL home page:</DT>
 		<DD><A
 		  HREF="http://oasis-open.org/committees/ubl/">http://oasis-open.org/committees/ubl/</A></DD>
-		<DT>Formal input to UBL from industry data exchange organizations is
+		<DT>Formal input to UBL from industry dataList exchange organizations is
 		  provided through the UBL Liaison Subcommittee:</DT>
 		<DD><A
 		  HREF="http://oasis-open.org/committees/ubl/lsc/">http://oasis-open.org/committees/ubl/lsc/</A></DD>
@@ -277,7 +277,7 @@ address
 		<DD>A graphical notation used by the UML [UML] to describe the static
 		  structure of a system, including object classes and their associations.</DD> 
 		<DT><B>Container</B></DT> 
-		<DD>A modular and self-contained group of data components.</DD> 
+		<DD>A modular and self-contained group of dataList components.</DD>
 		<DT><B>Containership</B></DT> 
 		<DD>Aggregating components (nested elements in an XML schema [XML]).</DD>
 		
@@ -300,14 +300,14 @@ address
 		<DD>A formal technique for identifying and defining functional
 		  dependencies.</DD> 
 		<DT><B>Normalized Model</B></DT> 
-		<DD>A representation of normalized data components.</DD> 
+		<DD>A representation of normalized dataList components.</DD>
 		<DT><B>Schema</B></DT> 
 		<DD>An XML document definition based on the W3C XML Schema&nbsp;language
 		  [XSD1][XSD2].</DD> 
 		<DT><B>schema</B></DT> 
 		<DD>Any XML document definition.</DD> 
 		<DT><B>Spreadsheet Model</B></DT> 
-		<DD>A representation of a data model in tabular form.</DD> 
+		<DD>A representation of a dataList model in tabular form.</DD>
 	 </DL> 
 	 <P>The terms <I>Core Component</I> and <I>Business Information Entity</I>
 		are used in this specification with the meanings given in [CCTS].</P> 
@@ -672,7 +672,7 @@ address
 		(complex), Despatch Advice or Receipt Advice by the Identifier of those
 		documents.</P> 
 	 <P>Taxation on the Invoice allows for Compound Taxes, the sequence of
-		calculation implied by the sequence of information repeated in the data-stream.
+		calculation implied by the sequence of information repeated in the dataList-stream.
 		(e.g., Energy tax, with VAT &#x0097; Value Added Tax &#x0097;
 		superimposed).</P> 
 	 <P>Charges can be specified either as a lump sum, or by percentage applied
@@ -696,7 +696,7 @@ address
 		expressed as a conceptual model. These are then assembled into hierarchical
 		document structures and transformed using the UBL Naming and Design rules into
 		XML Schema syntax.</P> 
-	 <P>The non-normative UBL document models contain enough meta-data to allow
+	 <P>The non-normative UBL document models contain enough meta-dataList to allow
 		the automatic generation of XML Schemas based on the UBL Naming and Design
 		Rules.</P> 
 
@@ -720,7 +720,7 @@ address
 		  </DD> 
 	 </DL> 
 	 <DL> 
-		<DT>All Aggregate Business Information Entities are expressed as complex data types as defined in the UBL Re-usable Component Library schema, which references the UBL Core Component Types.  This schema also defines all reused Basic Business Information Entities:</DT> 
+		<DT>All Aggregate Business Information Entities are expressed as complex dataList types as defined in the UBL Re-usable Component Library schema, which references the UBL Core Component Types.  This schema also defines all reused Basic Business Information Entities:</DT>
 		<DD><A
 		  HREF="xsd/UBL_Library_0p70_Reusable.xsd">xsd/UBL_Library_0p70_Reusable.xsd</A></DD>
 		
@@ -796,7 +796,7 @@ address
 	 <P>Content components can be identified at three levels:</P> 
 	 <OL CLASS="arabic" TYPE="1"> 
 		<LI>"Atomic" components that hold individual pieces of information and
-		  that are typically represented by primitive data types (e.g., "string,"
+		  that are typically represented by primitive dataList types (e.g., "string,"
 		  "Boolean," "date") or datatypes readily derived from these. </LI> 
 		<LI>"Aggregate" components that hold logically related groups of atomic
 		  components and sub-aggregates. </LI> 
@@ -811,23 +811,23 @@ address
 		Name, Address and DateOfBirth into an aggregate component of Person. But what
 		is it about the associations among these three components that makes them into
 		a good aggregate?</P> 
-	 <P>The answer comes from conventional data modeling practice, which
+	 <P>The answer comes from conventional dataList modeling practice, which
 		includes formal rules for designing logical structures and establishing what
-		data analysts call functional dependencies in order to create modular and
+		dataList analysts call functional dependencies in order to create modular and
 		self-contained groups that lend themselves naturally to re-use. Such grouping
 		are referred to here as "containers".</P> 
 	 <P>Analysis has identified three types of containers that are relevant to
 		the design of UBL:</P> 
 	 <UL> 
 		<LI><B>List Containers</B> 
-		  <P>List containers provide a wrapper around sets of repeated data
+		  <P>List containers provide a wrapper around sets of repeated dataList
 			 structures with differing values. They are, "containers of a series of like
 			 elements". For example Line Items in an Order; each Line Item has the same
 			 structure, such as item number, description, quantity, etc, and there can be
 			 many Line Item occurrences.</P> 
 		  <P>The list container serves to signal the bounds of the list for
 			 processing and display purposes. The criteria for list containership in such
-			 cases is technical rather than semantic. Whenever a data element is defined as
+			 cases is technical rather than semantic. Whenever a dataList element is defined as
 			 repeatable in the logical model, it is possible to wrap it in list
 			 container.</P> 
 		  <P>We refer to these lists of repeated elements as &#x0091;List&#x0092;
@@ -866,7 +866,7 @@ address
 		dependencies is known as normalization. Normalization is a series of analytic
 		steps that:</P> 
 	 <OL> 
-		<LI>Ensures that all data elements in a group are discrete, i.e., can
+		<LI>Ensures that all dataList elements in a group are discrete, i.e., can
 		  only take a single value. This means we won't find lists of repeating values in
 		  any logical group. </LI> 
 		<LI>Establishes the primary identifier of each logical group. </LI> 
@@ -893,11 +893,11 @@ address
 	 <H3>A.4 Assembling Hierarchical Document Models</H3> 
 
 	 <P>Two-way association such as the one between Product and Order are common
-		in normalized data models and reflect the complex network or web of
+		in normalized dataList models and reflect the complex network or web of
 		associations that exist in the real world. The ontology they
 		describe&nbsp;provides great flexibility in the way we can maintain our
 		information.</P> 
-	 <P>But, in data exchange information flexibility amounts to ambiguity. We
+	 <P>But, in dataList exchange information flexibility amounts to ambiguity. We
 		do not want to show all the associations among the information components, only
 		those that are relevant to the business context. This context-specificity is
 		best achieved by creating (or assembling) a hierarchical view out of the
@@ -916,9 +916,9 @@ address
 		associations of the normalized model are reconciled into one-to-many,
 		uni-directional pathways.</P> 
 	 <P>The hierarchical view enforces integrity rules and resolves ambiguity in
-		the meaning of the data. What we are saying when we assemble a hierarchical
+		the meaning of the dataList. What we are saying when we assemble a hierarchical
 		view is "we want to emphasize one context in which you are to understand the
-		data this way."</P> 
+		dataList this way."</P>
 	 <P>Once it is assembled by following a uni-directional path through the
 		normalized model, the hierarchical document model can be directly implemented
 		as an XML schema. This document schema need not show all components and their
@@ -955,11 +955,11 @@ address
 
 	 <h3>B.1 Introduction</h3> 
 
-	 <p>The normalized data model describes the Object Classes, Properties and
+	 <p>The normalized dataList model describes the Object Classes, Properties and
 		Associations involved in a general trade procurement process, as defined by
 		Section 5 of this Specification.</p> 
 
-	 <p>This data model is presented in both spreadsheet form and&nbsp;
+	 <p>This dataList model is presented in both spreadsheet form and&nbsp;
 		graphically as Class diagrams.</p> 
 
 	 <p>Note that this model does not represent any specific document type.&nbsp; It
@@ -975,11 +975,11 @@ address
 		the structure of UBL. Therefore, we have included a graphical notation in the
 		form of UML Class Diagrams [UML]. Such a notation provides a top-level,
 		exploding view. </p> 
-	 <p>The spreadsheet for the normalized data model is referenced through 
+	 <p>The spreadsheet for the normalized dataList model is referenced through
 		<br><a href="xls/UBL_Library_0p70_normalized_components.xls">xls/UBL_Library_0p70_normalized_components.xls</a></p>
 	 
 	 <h3>B.3 UML Class Diagrams</h3> 
-	 <p>These UML class diagrams were automatically generated from the normalized data model spreadsheet(ref: B.2)included in this distribution.
+	 <p>These UML class diagrams were automatically generated from the normalized dataList model spreadsheet(ref: B.2)included in this distribution.
 		Because of their inherent complexity alternative layouts and document formats are provided to aid viewing.</p>
 	 <p>The compressed file for the normalized UML diagrams is referenced through 
 		<br><a href="uml/UBL_Library_0p70_normalizedmodelUMLclassdiagrams.zip">uml/UBL_Library_0p70_normalizedmodelUMLclassdiagrams.zip</a></p>
@@ -1219,66 +1219,126 @@ address
 	 </DL> 
          <P>The formatting specification documentation conventions and summary of work in this area for this package is found in the <a href="fs/index.html">formatting specification index file</a>.</P>
 
-
-<h2>D. 5  &nbsp;Other Document Samples</h2>
-<p>The business transactions represented here focus on Order Management and are intended to be examples of how these documents can be used.  These samples were manually created by business experts and are only meant to show some possible ways to use these documents.  These are not the only way to create UBL compliant documents.   
-<p>There are two sets of examples.  
-<ul>
-	<li> The first example "Buying Office Supplies" goes through the process of ordering items from an office supply and the following transactions.  <br><img src="xml/stationery.gif" alt="">
-	<li> The second example "Buying Joinery", goes through purchasing items in the UK from Specialist Windows, PLC, and the following transactions.<br><img src="xml/joinery.gif" alt="">
-
-</ul>
-
-<h4>Example One Buying Office Supplies</h4>
-<DL>
-	<DT>The buyer, Bill's Microdevices, orders several different items from an office supply store. He knows the supplier's codes for the items and the price.</DT>
-
-<DD><A
-		  HREF="xml/OfficeSupplyOrderInstance.xml">Office Supply Order - XML instance</A>, <a href="xml/OfficeSupplyOrderInstance.pdf">Office Supply Order - printed version</a></DD>
-
-
-<DT>The seller, Joes Office Supply, replies with an Order Response (simple) so as to indicate the acceptance of the order. At the same time, the seller gives his reference number of the order, i.e. the sales order in his system, and also tells the buyer whom to contact if he has any queries.</DT>
-
-<DD><A
-		  HREF="xml/OfficeSupplyOrderRespSimInstance.xml">Office Supply Order Response - XML instance (simple)</A>, <a href="xml/OfficeSupplyOrderRespSimInstance.pdf">Office Supply Order Response - printed version</a></DD>
-
-
-<DT>The seller advises the buyer of the despatch of the items ordered.  The Despatch Advice travels with the delivery; a paper copy is signed and returned as proof of receipt. Hence the UBL Receipt Advice is not used.</DT>
-<DD><A
-		  HREF="xml/OfficeSupplyDespatchAdviceInstance.xml">Office Supply Despatch Advice - XML Instance</A>, <a href="xml/OfficeSupplyDespatchAdviceInstance.pdf">Office Supply Despatch Advice - printed version</a></DD>
-
-
-<DT>The Seller raises the Invoice automatically when the despatch occurs, and the resolution of any shortages etc would be handled post-invoicing. The Invoice show the tax amount The Seller notes that payment is due within 30 days of Invoice.</DT>
-<DD><A
-		  HREF="xml/OfficeSupplyInvoiceInstance.xml">Office Supply Invoice - XML Instance</A>, <a href="xml/OfficeSupplyInvoiceInstance.pdf">Office Supply Invoice - printed version</a></DD>
-
-</DL>
-
-<h4>Example Two Buying Joinery</h4>
-
-<DL>
-	<DT>The buyer, Jerry Builders, PLC. in the UK, orders a number of windows, a door set and some lengths of timber for delivery to a building site. He knows the supplier's codes for the items and that he must also specify a number of physical attributes to get the precise item that he wants. Some windows are asymmetric and are 'handed' left or right: most door sets are handed as they are hinged on one side. The wood and its finish, the 'fittings' are the handles, stays etc. Items can be glazed in different ways. Loose timber is coded according to its cross section and the length must be specified.  While the buyer knows these things from the catalogue he does not know the current prices or any discount rate he may get.</DT>
-
-<DD><A
-		  HREF="xml/JoineryOrderInstance1.xml">Joinery Order - XML Instance</A>, <A
-		  HREF="xml/JoineryOrderInstance1.pdf">Joinery Order - printed version</A></DD>
-<DT>The seller, Specialist Windows PLC, replies with an Order Response (complex) so as to indicate the unit price of each item and to inform the buyer of the trade discount that he will be given. At the same time, the seller gives his reference number of the order, i.e. the identity of the order in his system, and also tells the buyer whom to contact if he has any queries.</DT>
-<DD><A
-		  HREF="xml/JoineryOrderResponseInstance1.xml">Joinery Order Response - XML Instance</A>, <A
-		  HREF="xml/JoineryOrderResponseInstance1.pdf">Joinery Order Response - printed version</A></DD>
-
-<DT>The seller advises the buyer of the despatch of the items ordered, which will in fact be delivered on two pallets identified as "A" and "B" (i.e. transportation units). The Despatch Advice lists the items in order line sequence and refers to the pallet on which the item is delivered.</DT>
-<DD><A
-		  HREF="xml/JoineryDespatchAdviceInstance1.xml">Joinery Despatch Advice - XML Instance</A>, <A
-		  HREF="xml/JoineryDespatchAdviceInstance1.pdf">Joinery Despatch Advice - printed version</A></DD>
-
-<DT>The Despatch Advice travels with the delivery; a paper copy is signed and returned as proof of receipt. Hence the UBL Receipt Advice is not used.
-<BR>The Seller raises the Invoice automatically when the despatch occurs, and the resolution of any shortages would be handled post-invoicing. The Invoice has to show the tax point date, the VAT (Value Added Tax) category to which the item belongs and also to show the VAT rate and total for each tax category on the invoice. VAT is also applied to charges such as the delivery surcharge. In order to encourage speedy payment of the amount due, the Seller offers a discount for prompt settlement, which the buyer can deduct if paying within 30 days. (Note that VAT regulations assume it will be taken and so the tax is calculated on the trade discounted total of line items plus any charges and less the settlement discount amount.)</DT>
-<DD><A
-		  HREF="xml/JoineryInvoiceInstance1.xml">Joinery Invoice - XML Instance</A>, <A
-		  HREF="xml/JoineryInvoiceInstance1.pdf">Joinery Invoice - printed version</A></DD>
-<DT>This scenario is based on the products, product identification, business requirements and practices of a real UK joinery manufacturer and sales company. It operated its own specialised transport fleet delivering all over the United Kingdom and to offshore islands.</DT>
-</DL>
+
+
+<h2>D. 5  &nbsp;Other Document Samples</h2>
+
+<p>The business transactions represented here focus on Order Management and are intended to be examples of how these documents can be used.  These samples were manually created by business experts and are only meant to show some possible ways to use these documents.  These are not the only way to create UBL compliant documents.   
+
+<p>There are two sets of examples.  
+
+<ul>
+
+	<li> The first example "Buying Office Supplies" goes through the process of ordering items from an office supply and the following transactions.  <br><img src="xml/stationery.gif" alt="">
+
+	<li> The second example "Buying Joinery", goes through purchasing items in the UK from Specialist Windows, PLC, and the following transactions.<br><img src="xml/joinery.gif" alt="">
+
+
+
+</ul>
+
+
+
+<h4>Example One Buying Office Supplies</h4>
+
+<DL>
+
+	<DT>The buyer, Bill's Microdevices, orders several different items from an office supply store. He knows the supplier's codes for the items and the price.</DT>
+
+
+
+<DD><A
+
+		  HREF="xml/OfficeSupplyOrderInstance.xml">Office Supply Order - XML instance</A>, <a href="xml/OfficeSupplyOrderInstance.pdf">Office Supply Order - printed version</a></DD>
+
+
+
+
+
+<DT>The seller, Joes Office Supply, replies with an Order Response (simple) so as to indicate the acceptance of the order. At the same time, the seller gives his reference number of the order, i.e. the sales order in his system, and also tells the buyer whom to contact if he has any queries.</DT>
+
+
+
+<DD><A
+
+		  HREF="xml/OfficeSupplyOrderRespSimInstance.xml">Office Supply Order Response - XML instance (simple)</A>, <a href="xml/OfficeSupplyOrderRespSimInstance.pdf">Office Supply Order Response - printed version</a></DD>
+
+
+
+
+
+<DT>The seller advises the buyer of the despatch of the items ordered.  The Despatch Advice travels with the delivery; a paper copy is signed and returned as proof of receipt. Hence the UBL Receipt Advice is not used.</DT>
+
+<DD><A
+
+		  HREF="xml/OfficeSupplyDespatchAdviceInstance.xml">Office Supply Despatch Advice - XML Instance</A>, <a href="xml/OfficeSupplyDespatchAdviceInstance.pdf">Office Supply Despatch Advice - printed version</a></DD>
+
+
+
+
+
+<DT>The Seller raises the Invoice automatically when the despatch occurs, and the resolution of any shortages etc would be handled post-invoicing. The Invoice show the tax amount The Seller notes that payment is due within 30 days of Invoice.</DT>
+
+<DD><A
+
+		  HREF="xml/OfficeSupplyInvoiceInstance.xml">Office Supply Invoice - XML Instance</A>, <a href="xml/OfficeSupplyInvoiceInstance.pdf">Office Supply Invoice - printed version</a></DD>
+
+
+
+</DL>
+
+
+
+<h4>Example Two Buying Joinery</h4>
+
+
+
+<DL>
+
+	<DT>The buyer, Jerry Builders, PLC. in the UK, orders a number of windows, a door set and some lengths of timber for delivery to a building site. He knows the supplier's codes for the items and that he must also specify a number of physical attributes to get the precise item that he wants. Some windows are asymmetric and are 'handed' left or right: most door sets are handed as they are hinged on one side. The wood and its finish, the 'fittings' are the handles, stays etc. Items can be glazed in different ways. Loose timber is coded according to its cross section and the length must be specified.  While the buyer knows these things from the catalogue he does not know the current prices or any discount rate he may get.</DT>
+
+
+
+<DD><A
+
+		  HREF="xml/JoineryOrderInstance1.xml">Joinery Order - XML Instance</A>, <A
+
+		  HREF="xml/JoineryOrderInstance1.pdf">Joinery Order - printed version</A></DD>
+
+<DT>The seller, Specialist Windows PLC, replies with an Order Response (complex) so as to indicate the unit price of each item and to inform the buyer of the trade discount that he will be given. At the same time, the seller gives his reference number of the order, i.e. the identity of the order in his system, and also tells the buyer whom to contact if he has any queries.</DT>
+
+<DD><A
+
+		  HREF="xml/JoineryOrderResponseInstance1.xml">Joinery Order Response - XML Instance</A>, <A
+
+		  HREF="xml/JoineryOrderResponseInstance1.pdf">Joinery Order Response - printed version</A></DD>
+
+
+
+<DT>The seller advises the buyer of the despatch of the items ordered, which will in fact be delivered on two pallets identified as "A" and "B" (i.e. transportation units). The Despatch Advice lists the items in order line sequence and refers to the pallet on which the item is delivered.</DT>
+
+<DD><A
+
+		  HREF="xml/JoineryDespatchAdviceInstance1.xml">Joinery Despatch Advice - XML Instance</A>, <A
+
+		  HREF="xml/JoineryDespatchAdviceInstance1.pdf">Joinery Despatch Advice - printed version</A></DD>
+
+
+
+<DT>The Despatch Advice travels with the delivery; a paper copy is signed and returned as proof of receipt. Hence the UBL Receipt Advice is not used.
+
+<BR>The Seller raises the Invoice automatically when the despatch occurs, and the resolution of any shortages would be handled post-invoicing. The Invoice has to show the tax point date, the VAT (Value Added Tax) category to which the item belongs and also to show the VAT rate and total for each tax category on the invoice. VAT is also applied to charges such as the delivery surcharge. In order to encourage speedy payment of the amount due, the Seller offers a discount for prompt settlement, which the buyer can deduct if paying within 30 days. (Note that VAT regulations assume it will be taken and so the tax is calculated on the trade discounted total of line items plus any charges and less the settlement discount amount.)</DT>
+
+<DD><A
+
+		  HREF="xml/JoineryInvoiceInstance1.xml">Joinery Invoice - XML Instance</A>, <A
+
+		  HREF="xml/JoineryInvoiceInstance1.pdf">Joinery Invoice - printed version</A></DD>
+
+<DT>This scenario is based on the products, product identification, business requirements and practices of a real UK joinery manufacturer and sales company. It operated its own specialised transport fleet delivering all over the United Kingdom and to offshore islands.</DT>
+
+</DL>
+
 
 <P><BR></P>
 <ADDRESS>Last modified 18 February 2003/5:29pm CST<BR>Copyright &copy; 2003 OASIS</ADDRESS> 

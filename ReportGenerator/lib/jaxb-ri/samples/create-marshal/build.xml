@@ -6,7 +6,7 @@
   <description>
         This sample application demonstrates how to use the ObjectFactory 
         class to create a Java content tree from scratch and marshal it to 
-        XML data. It also demonstrates how to add content to a JAXB List 
+        XML dataList. It also demonstrates how to add content to a JAXB List
         property.
     </description>
   <property name="jaxb.home" value="../.." />

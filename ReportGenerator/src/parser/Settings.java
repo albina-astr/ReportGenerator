@@ -8,7 +8,7 @@ import java.util.List;
 public class Settings {
     @XmlElement(name = "page")
     private Page pages;
-    @XmlElement(name = "columnsL")
+    @XmlElement(name = "columnsList")
     private Columns columns;
 
     public Settings() {
@@ -105,21 +105,21 @@ public class Settings {
     @XmlAccessorType(XmlAccessType.FIELD)
     public static class Columns {
         @XmlElement(name = "column")
-        private List<Column> columnsL;
+        private List<Column> columnsList;
 
-        public Columns(List<Column> columnsL) {
-            this.columnsL = columnsL;
+        public Columns(List<Column> columnsList) {
+            this.columnsList = columnsList;
         }
 
         public Columns() {
         }
 
-        public List<Column> getColumnsL() {
-            return columnsL;
+        public List<Column> getColumnsList() {
+            return columnsList;
         }
 
-        public void setColumnsL(List<Column> columnsL) {
-            this.columnsL = columnsL;
+        public void setColumnsList(List<Column> columnsList) {
+            this.columnsList = columnsList;
         }
     }
 }
